@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\matcherProjectSite\\matcher\\WebApplication1\\WebApplication1.csproj": {}
+    "D:\\matcherProjectSite\\matcher\\WebApplication1\\Matcher.csproj": {}
   },
   "projects": {
-    "D:\\matcherProjectSite\\matcher\\WebApplication1\\WebApplication1.csproj": {
+    "D:\\matcherProjectSite\\matcher\\WebApplication1\\Matcher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\matcherProjectSite\\matcher\\WebApplication1\\WebApplication1.csproj",
-        "projectName": "WebApplication1",
-        "projectPath": "D:\\matcherProjectSite\\matcher\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "D:\\matcherProjectSite\\matcher\\WebApplication1\\Matcher.csproj",
+        "projectName": "Matcher",
+        "projectPath": "D:\\matcherProjectSite\\matcher\\WebApplication1\\Matcher.csproj",
         "packagesPath": "C:\\Users\\Rafał\\.nuget\\packages\\",
         "outputPath": "D:\\matcherProjectSite\\matcher\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
