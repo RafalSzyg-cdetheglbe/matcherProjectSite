@@ -11,8 +11,11 @@ namespace WebApplication1.DB
     {
         [Column("Id")]
         public int ZdjeciaUzytkownika_Id { set; get; }
-        [Column("Uzytkownik")]
+       
         public int Uzytkownik_Id { set; get; }
+        [Column("Uzytkownik")]
+        [ForeignKey(nameof(Uzytkownik_Id))]
+        public Uzytkownik Uzytkownik { set; get; }
         [Column("Link")]
         public string Link { set; get; }
     }

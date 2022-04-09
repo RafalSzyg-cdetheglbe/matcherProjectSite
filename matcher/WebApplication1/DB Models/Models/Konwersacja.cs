@@ -14,8 +14,9 @@ namespace WebApplication1.DB
         [Key]
         public int Konwersacja_Id { set; get; }
         [Column("Uczestnik")]
-        public ICollection<UczestnikKonwersacji> { set; get; }
-
+        public ICollection<UczestnikKonwersacji> UczestnicyKonwersacji { set; get; }
+        [Column("Uzytkownik")]
+        public ICollection<Uzytkownik> Uzytkownik { set; get; }
 
     }
 }

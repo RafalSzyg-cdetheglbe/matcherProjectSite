@@ -15,5 +15,7 @@ namespace WebApplication1.DB
         public ICollection<Konwersacja> Konwersacje{ set; get; }
         [Column("Uzytkownik")]
         public ICollection<Uzytkownik> Uzytkownicy{ set; get; }
+        [Column("Wiadomosc")]
+        public ICollection<Wiadomosc> Wiadomosci { set; get; }
     }
 }

@@ -13,6 +13,11 @@ namespace WebApplication1.DB
         [Column("Id")]
         public int Plec_Id { set; get; }
         [Column("Nazwa")]
+        public int Uzytkownik_Id { set; get; }
+
+        [ForeignKey (nameof(Uzytkownik_Id))]
+        public Uzytkownik Uzytkownik { set; get; }
+
         public ICollection<Plec> Nazwa { set; get; }
     }
 }
