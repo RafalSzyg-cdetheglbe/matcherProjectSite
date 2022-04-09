@@ -9,9 +9,13 @@ namespace WebApplication1.Konwersacja
     [Table("Wiadomosc")]
     public class Wiadomosc
     {
-        public int Id { set; get; }
+        [Column("Id")]
+        public int Wiadomosc_Id { set; get; }
+        [Column("Uczestnik")]
         public int Uczestnik_Id { set; get; }
+        [Column("Tresc")]
         public string Tresc { set; get; }
+        [Column("Czas")]
         public DateTime czas { set; get; }
     }
 }

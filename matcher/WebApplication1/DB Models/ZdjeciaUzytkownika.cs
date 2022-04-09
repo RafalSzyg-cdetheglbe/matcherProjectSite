@@ -9,8 +9,11 @@ namespace WebApplication1.DB
     [Table("ZdjeciaUzytkownika")]
     public class ZdjeciaUzytkownika
     {
-        public int Id { set; get; }
+        [Column("Id")]
+        public int ZdjeciaUzytkownika_Id { set; get; }
+        [Column("Uzytkownik")]
         public int Uzytkownik_Id { set; get; }
+        [Column("Link")]
         public string Link { set; get; }
     }
 }
