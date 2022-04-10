@@ -7,7 +7,7 @@ using WebApplication1.DB;
 
 namespace Repositories.Interfaces
 {
-    interface IUzytkownikRepo
+   public interface IUzytkownikRepo
     {
         public void AddUzytkownik(Uzytkownik uzytkownik);
         public IEnumerable<Uzytkownik> GetUzytkownicy();

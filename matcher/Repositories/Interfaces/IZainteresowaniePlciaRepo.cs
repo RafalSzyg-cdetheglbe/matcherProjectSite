@@ -7,7 +7,7 @@ using WebApplication1.DB;
 
 namespace Repositories.Interfaces
 {
-    interface IZainteresowaniePlciaRepo
+   public interface IZainteresowaniePlciaRepo
     {
         public void AddZainteresowaniePlcia(ZainteresowaniePlcia zainteresowanieplacia);
         public IEnumerable<ZainteresowaniePlcia> GetZainteresowania();

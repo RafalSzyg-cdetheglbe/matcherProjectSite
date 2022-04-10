@@ -7,7 +7,7 @@ using WebApplication1.DB;
 
 namespace Repositories.Interfaces
 {
-    interface IPlecRepo
+    public interface IPlecRepo
     {
         public void AddPlec(Plec plec);
         public IEnumerable<Plec> GetPlci();

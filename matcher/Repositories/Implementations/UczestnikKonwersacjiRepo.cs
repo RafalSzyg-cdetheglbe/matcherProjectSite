@@ -9,11 +9,11 @@ using WebApplication1.DB;
 
 namespace Repositories.Implementations
 {
-    class UczestnikKonwersacjiRepo : IUczestnikKonwersacjiRepo
+   public class UczestnikKonwersacjiRepo : IUczestnikKonwersacjiRepo
     {
         private readonly MatcherDB matcherDb;
 
-        UczestnikKonwersacjiRepo(MatcherDB matcherbd)
+        public UczestnikKonwersacjiRepo(MatcherDB matcherbd)
         {
             this.matcherDb = matcherbd;
         }

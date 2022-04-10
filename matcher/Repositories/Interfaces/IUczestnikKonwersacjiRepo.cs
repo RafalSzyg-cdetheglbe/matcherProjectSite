@@ -7,7 +7,7 @@ using WebApplication1.DB;
 
 namespace Repositories.Interfaces
 {
-    interface IUczestnikKonwersacjiRepo
+   public interface IUczestnikKonwersacjiRepo
     {
         public void AddUczestnikKonwersacji(UczestnikKonwersacji uczestnik);
         public IEnumerable<UczestnikKonwersacji> GetUczestnicy();

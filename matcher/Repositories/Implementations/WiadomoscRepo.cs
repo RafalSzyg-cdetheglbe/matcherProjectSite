@@ -9,11 +9,11 @@ using WebApplication1.DB;
 
 namespace Repositories.Implementations
 {
-    class WiadomoscRepo : IWiadomoscRepo
+  public  class WiadomoscRepo : IWiadomoscRepo
     {
         private readonly MatcherDB matcherDb;
 
-        WiadomoscRepo(MatcherDB matcherbd)
+        public WiadomoscRepo(MatcherDB matcherbd)
         {
             this.matcherDb = matcherbd;
         }

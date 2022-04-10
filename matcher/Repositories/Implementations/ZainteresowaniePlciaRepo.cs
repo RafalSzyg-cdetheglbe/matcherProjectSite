@@ -9,11 +9,11 @@ using WebApplication1.DB;
 
 namespace Repositories.Implementations
 {
-    class ZainteresowaniePlciaRepo : IZainteresowaniePlciaRepo
+  public  class ZainteresowaniePlciaRepo : IZainteresowaniePlciaRepo
     {
         private readonly MatcherDB matcherDb;
 
-        ZainteresowaniePlciaRepo(MatcherDB matcherbd)
+        public ZainteresowaniePlciaRepo(MatcherDB matcherbd)
         {
             this.matcherDb = matcherbd;
         }

@@ -9,11 +9,11 @@ using WebApplication1.DB;
 
 namespace Repositories.Implementations
 {
-    class UzytkownikRepo : IUzytkownikRepo
+   public class UzytkownikRepo : IUzytkownikRepo
     {
         private readonly MatcherDB matcherDb;
 
-        UzytkownikRepo(MatcherDB matcherdb)
+       public UzytkownikRepo(MatcherDB matcherdb)
         {
             this.matcherDb = matcherdb;
         }

@@ -7,7 +7,7 @@ using WebApplication1.DB;
 
 namespace Repositories.Interfaces
 {
-    interface IWiadomoscRepo
+    public interface IWiadomoscRepo
     {
         public void AddWiadomosc(Wiadomosc wiadomosc);
         public IEnumerable<Wiadomosc> GetWiadomosci();

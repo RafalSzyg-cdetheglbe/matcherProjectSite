@@ -9,11 +9,11 @@ using WebApplication1.DB;
 
 namespace Repositories.Implementations
 {
-    class PlecRepo : IPlecRepo
+  public  class PlecRepo : IPlecRepo
     {
         private readonly MatcherDB matcherDb;
 
-        PlecRepo(MatcherDB matcherDb)
+        public PlecRepo(MatcherDB matcherDb)
         {
             this.matcherDb = matcherDb;
         }

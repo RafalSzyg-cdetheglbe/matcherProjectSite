@@ -7,7 +7,7 @@ using WebApplication1.DB;
 
 namespace Repositories.Interfaces
 {
-    interface IZdjeciaUzytkownikaRepo
+    public interface IZdjeciaUzytkownikaRepo
     {
         public void AddZdjecie(ZdjeciaUzytkownika zdjecie);
         public IEnumerable<ZdjeciaUzytkownika> GetZdjecia();
