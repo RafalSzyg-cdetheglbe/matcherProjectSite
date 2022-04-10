@@ -13,5 +13,7 @@ namespace Repositories.Interfaces
         public IEnumerable<Plec> GetPlci();
         public bool DeletePlec(int id);
         public Plec GetPlec(int id);
+
+        public bool AddPlecToUser(int uzytkownikId, int plecId);
     }
 }

@@ -22,6 +22,11 @@ namespace Repositories.Implementations
             matcherDb.Plci.Add(plec);
         }
 
+        public bool AddPlecToUser(int uzytkownikId, int plecId)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool DeletePlec(int id)
         {
             bool wynik = false;
