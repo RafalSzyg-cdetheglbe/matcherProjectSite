@@ -9,9 +9,9 @@ namespace BuisnessLayer.Interfaces
 {
   public  interface IUzytkownik
     {
-        public void AddUzytkownik(Uzytkownik uzytkownik);
+        public Uzytkownik AddUzytkownik(Uzytkownik uzytkownik);
         public IEnumerable<Uzytkownik> GetUzytkownicy();
-        public bool DeleteUser(int id);
+        public bool DeleteUzytkownik(int id);
         public Uzytkownik GetUzytkownik(int id);
     }
 }

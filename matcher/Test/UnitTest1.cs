@@ -1,3 +1,5 @@
+using BuisnessLayer.Interfaces;
+using Matcher;
 using NUnit.Framework;
 using System;
 using WebApplication1.DB;
@@ -10,12 +12,21 @@ namespace Test
         [Test]
         public void TestDummy()
         {
-            string Name = null;
-            string firstName = It.IsAny<string>(); // Dummy
+            
+        }
 
-            Action act = () => new Uzytkownik(firstName, Name);
+        [Test]
+        public void TestFake()
+        {
 
-            act.ShouldThrow<ArgumentNullException>();
+
+        }
+
+        [Test]
+        public void TestMock()
+        {
+
+
         }
     }
 }

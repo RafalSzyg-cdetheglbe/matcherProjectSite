@@ -40,24 +40,55 @@ namespace BuisnessLayer.Implementations
             return true;
         }
 
-        public void AddUzytkownik(Uzytkownik uzytkownik)
+        public Uzytkownik AddUzytkownik(Uzytkownik uzytkownik)
         {
-            throw new NotImplementedException();
+            if (uzytkownik == null)
+                throw new ArgumentException("Invalid uzytkownik details");
+
+
+            var _uzytkownik = uow.Uzytkownik.GetUzytkownik(uzytkownik.Uzytkownik_Id);
+            if (_uzytkownik == null)
+            {
+                _uzytkownik = new Uzytkownik
+                {
+                    Imie = uzytkownik.Imie
+                };
+                uow.Uzytkownik.AddUzytkownik(uzytkownik);
+            }
+            else
+            {
+                _uzytkownik.Imie = uzytkownik.Imie;
+            }
+
+            uow.Complete();
+
+            return _uzytkownik;
         }
 
-        public bool DeleteUser(int id)
+        public bool DeleteUzytkownik(int id)
         {
-            throw new NotImplementedException();
+            if (id <= default(int))
+                throw new ArgumentException("Invalid uzytkownik id");
+
+            var isremoved = uow.Uzytkownik.DeleteUser(id);
+            if (isremoved)
+                uow.Complete();
+
+            return isremoved;
         }
 
         public IEnumerable<Uzytkownik> GetUzytkownicy()
         {
-            throw new NotImplementedException();
+            return uow.Uzytkownik.GetUzytkownicy();
         }
 
         public Uzytkownik GetUzytkownik(int id)
         {
-            throw new NotImplementedException();
+            if (id <= default(int))
+                throw new ArgumentException("Invalid uzytkownik id");
+
+            return uow.Uzytkownik.GetUzytkownik(id);
         }
     }
 }
+
