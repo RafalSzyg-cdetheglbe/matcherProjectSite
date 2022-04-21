@@ -1,4 +1,5 @@
 ﻿using BuisnessLayer.Interfaces;
+using Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,25 @@ namespace BuisnessLayer.Implementations
 {
     class BLPlec : IPlec
     {
-        public void AddPlec(Plec plec)
+        private readonly IUnitOfWork uow;
+        public BLPlec(IUnitOfWork uow)
         {
-            throw new NotImplementedException();
+            this.uow = uow;
+        }
+
+        public Plec AddPlec(Plec plec)
+        {
+            var _plec = uow.Plec.GetPlec(plec.Plec_Id);
+            if (_plec == null)
+            {
+                _plec = new Plec
+                {
+                    Nazwa = _plec.Nazwa
+                };
+                uow.Plec.AddPlec(_plec);
+            }
+            uow.Complete();
+            return _plec;
         }
 
         public bool AddPlecToUser(int uzytkownikId, int plecId)
@@ -22,17 +39,23 @@ namespace BuisnessLayer.Implementations
 
         public bool DeletePlec(int id)
         {
-            throw new NotImplementedException();
+            if (id <= default(int))
+            {
+                throw new ArgumentException("Invalid konwersacja id");
+            }
+            var isremoved = uow.Plec.DeletePlec(id);
+            if (isremoved) uow.Complete();
+            return isremoved;
         }
 
         public IEnumerable<Plec> GetPlci()
         {
-            throw new NotImplementedException();
+            return uow.Plec.GetPlci();
         }
 
         public Plec GetPlec(int id)
         {
-            throw new NotImplementedException();
+            return uow.Plec.GetPlec(id);
         }
     }
 }

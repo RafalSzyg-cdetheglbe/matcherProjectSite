@@ -9,7 +9,7 @@ namespace BuisnessLayer.Interfaces
 {
     interface IPlec
     {
-        public void AddPlec(Plec plec);
+        public Plec AddPlec(Plec plec);
         public IEnumerable<Plec> GetPlci();
         public bool DeletePlec(int id);
         public Plec GetPlec(int id);

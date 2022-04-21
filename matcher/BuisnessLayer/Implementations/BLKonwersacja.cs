@@ -1,4 +1,5 @@
 ﻿using BuisnessLayer.Interfaces;
+using Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,24 +11,43 @@ namespace BuisnessLayer.Implementations
 {
     class BLKonwersacja : IKonwersacja
     {
-        public void AddKonwersacja(Konwersacja konwersacja)
+        private readonly IUnitOfWork uow;
+        public BLKonwersacja(IUnitOfWork uow)
         {
-            throw new NotImplementedException();
+            this.uow = uow;
+        }
+
+        public Konwersacja AddKonwersacja(Konwersacja konwersacja)
+        {
+            var _konwersacja = uow.Konwersacja.Get_Konwersacja(konwersacja.Konwersacja_Id);
+            if (_konwersacja == null)
+            {
+                _konwersacja = new Konwersacja();
+                uow.Konwersacja.AddKonwersacja(_konwersacja);
+            }
+            uow.Complete();
+            return _konwersacja;
         }
 
         public bool DeleteKonwersacja(int id)
         {
-            throw new NotImplementedException();
+            if(id <= default(int))
+            {
+                throw new ArgumentException("Invalid konwersacja id");
+            }
+            var isremoved = uow.Konwersacja.DeleteKonwersacja(id);
+            if (isremoved) uow.Complete();
+            return isremoved;
         }
 
         public IEnumerable<Konwersacja> GetKonwersacje()
         {
-            throw new NotImplementedException();
+            return uow.Konwersacja.GetKonwersacje();
         }
 
         public Konwersacja Get_Konwersacja(int id)
         {
-            throw new NotImplementedException();
+            return uow.Konwersacja.Get_Konwersacja(id);
         }
     }
 }
