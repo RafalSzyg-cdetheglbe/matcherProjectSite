@@ -9,7 +9,7 @@ namespace BuisnessLayer.Interfaces
 {
     interface IUczestnikKonwersacji
     {
-        public void AddUczestnikKonwersacji(UczestnikKonwersacji uczestnik);
+        public UczestnikKonwersacji AddUczestnikKonwersacji(UczestnikKonwersacji uczestnik);
         public IEnumerable<UczestnikKonwersacji> GetUczestnicy();
         public bool DeleteUczestnik(int id);
         public UczestnikKonwersacji GetUczestnik(int id);
