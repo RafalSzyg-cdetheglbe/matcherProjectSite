@@ -5,7 +5,12 @@
       "ProjectGuid": "1dc8582d-6d6e-4781-b17a-57ad3013dd1b",
       "DisplayName": "Matcher",
       "ColorIndex": 0
+    },
+    "cd849b91-fdfd-4aae-be33-74b362be87af": {
+      "ProjectGuid": "cd849b91-fdfd-4aae-be33-74b362be87af",
+      "DisplayName": "BuisnessLayer",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

@@ -7438,19 +7438,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rafał\\.nuget\\packages\\": {}
+    "C:\\Users\\OLIWIA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\matcherProjectSite\\matcher\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\OLIWIA\\Documents\\GitHub\\matcherProjectSite\\matcher\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "D:\\matcherProjectSite\\matcher\\Test\\Test.csproj",
-      "packagesPath": "C:\\Users\\Rafał\\.nuget\\packages\\",
-      "outputPath": "D:\\matcherProjectSite\\matcher\\Test\\obj\\",
+      "projectPath": "C:\\Users\\OLIWIA\\Documents\\GitHub\\matcherProjectSite\\matcher\\Test\\Test.csproj",
+      "packagesPath": "C:\\Users\\OLIWIA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\OLIWIA\\Documents\\GitHub\\matcherProjectSite\\matcher\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rafał\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\OLIWIA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7464,17 +7464,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\matcherProjectSite\\matcher\\BuisnessLayer\\BuisnessLayer.csproj": {
-              "projectPath": "D:\\matcherProjectSite\\matcher\\BuisnessLayer\\BuisnessLayer.csproj"
+            "C:\\Users\\OLIWIA\\Documents\\GitHub\\matcherProjectSite\\matcher\\BuisnessLayer\\BuisnessLayer.csproj": {
+              "projectPath": "C:\\Users\\OLIWIA\\Documents\\GitHub\\matcherProjectSite\\matcher\\BuisnessLayer\\BuisnessLayer.csproj"
             },
-            "D:\\matcherProjectSite\\matcher\\Repositories\\Repositories.csproj": {
-              "projectPath": "D:\\matcherProjectSite\\matcher\\Repositories\\Repositories.csproj"
+            "C:\\Users\\OLIWIA\\Documents\\GitHub\\matcherProjectSite\\matcher\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\OLIWIA\\Documents\\GitHub\\matcherProjectSite\\matcher\\Repositories\\Repositories.csproj"
             },
-            "D:\\matcherProjectSite\\matcher\\UoW\\UoW.csproj": {
-              "projectPath": "D:\\matcherProjectSite\\matcher\\UoW\\UoW.csproj"
+            "C:\\Users\\OLIWIA\\Documents\\GitHub\\matcherProjectSite\\matcher\\UoW\\UoW.csproj": {
+              "projectPath": "C:\\Users\\OLIWIA\\Documents\\GitHub\\matcherProjectSite\\matcher\\UoW\\UoW.csproj"
             },
-            "D:\\matcherProjectSite\\matcher\\WebApplication1\\Matcher.csproj": {
-              "projectPath": "D:\\matcherProjectSite\\matcher\\WebApplication1\\Matcher.csproj"
+            "C:\\Users\\OLIWIA\\Documents\\GitHub\\matcherProjectSite\\matcher\\WebApplication1\\Matcher.csproj": {
+              "projectPath": "C:\\Users\\OLIWIA\\Documents\\GitHub\\matcherProjectSite\\matcher\\WebApplication1\\Matcher.csproj"
             }
           }
         }
@@ -7524,12 +7524,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

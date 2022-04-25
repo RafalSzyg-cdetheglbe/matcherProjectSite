@@ -9,7 +9,7 @@ namespace BuisnessLayer.Interfaces
 {
     interface IWiadomosc
     {
-        public void AddWiadomosc(Wiadomosc wiadomosc);
+        public Wiadomosc AddWiadomosc(Wiadomosc wiadomosc);
         public IEnumerable<Wiadomosc> GetWiadomosci();
         public bool DeleteWiadomosc(int id);
         public Wiadomosc GetWiadomosc(int id);

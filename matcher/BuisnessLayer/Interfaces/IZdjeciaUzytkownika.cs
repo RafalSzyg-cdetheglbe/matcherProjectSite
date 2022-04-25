@@ -9,7 +9,7 @@ namespace BuisnessLayer.Interfaces
 {
     interface IZdjeciaUzytkownika
     {
-        public void AddZdjecie(ZdjeciaUzytkownika zdjecie);
+        public ZdjeciaUzytkownika AddZdjecie(ZdjeciaUzytkownika zdjecie);
         public IEnumerable<ZdjeciaUzytkownika> GetZdjecia();
         public bool DeleteZdjecie(int id);
         public ZdjeciaUzytkownika GetZdjecie(int id);

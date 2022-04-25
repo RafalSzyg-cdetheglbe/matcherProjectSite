@@ -1,4 +1,5 @@
 ﻿using BuisnessLayer.Interfaces;
+using Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,24 +11,43 @@ namespace BuisnessLayer.Implementations
 {
     class BLWiadomosc : IWiadomosc
     {
-        public void AddWiadomosc(Wiadomosc wiadomosc)
+        private readonly IUnitOfWork uow;
+        public BLWiadomosc(IUnitOfWork uow)
         {
-            throw new NotImplementedException();
+            this.uow = uow;
+        }
+        public Wiadomosc AddWiadomosc(Wiadomosc wiadomosc)
+        {
+            var _wiadomosc = uow.Wiadomosc.GetWiadomosc(wiadomosc.Wiadomosc_Id);
+            if (_wiadomosc == null)
+            {
+                _wiadomosc = new Wiadomosc();
+
+                uow.Wiadomosc.AddWiadomosc(_wiadomosc);
+            }
+            uow.Complete();
+            return _wiadomosc;
         }
 
         public bool DeleteWiadomosc(int id)
         {
-            throw new NotImplementedException();
+            if (id <= default(int))
+            {
+                throw new ArgumentException("Invalid konwersacja id");
+            }
+            var isremoved = uow.Wiadomosc.DeleteWiadomosc(id);
+            if (isremoved) uow.Complete();
+            return isremoved;
         }
 
         public Wiadomosc GetWiadomosc(int id)
         {
-            throw new NotImplementedException();
+            return uow.Wiadomosc.GetWiadomosc(id);
         }
 
         public IEnumerable<Wiadomosc> GetWiadomosci()
         {
-            throw new NotImplementedException();
+            return uow.Wiadomosc.GetWiadomosci();
         }
     }
 }

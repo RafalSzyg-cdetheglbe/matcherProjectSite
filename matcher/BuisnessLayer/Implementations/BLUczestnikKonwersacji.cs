@@ -43,12 +43,12 @@ namespace BuisnessLayer.Implementations
 
         public IEnumerable<UczestnikKonwersacji> GetUczestnicy()
         {
-            throw new NotImplementedException();
+            return uow.Uczestnik.GetUczestnicy();
         }
 
         public UczestnikKonwersacji GetUczestnik(int id)
         {
-            throw new NotImplementedException();
+            return uow.Uczestnik.GetUczestnik(id);
         }
     }
 }

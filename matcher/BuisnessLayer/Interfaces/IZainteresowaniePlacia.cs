@@ -9,7 +9,7 @@ namespace BuisnessLayer.Interfaces
 {
     interface IZainteresowaniePlacia
     {
-        public void AddZainteresowaniePlcia(ZainteresowaniePlcia zainteresowanieplacia);
+        public ZainteresowaniePlcia AddZainteresowaniePlcia(ZainteresowaniePlcia zainteresowanieplacia);
         public IEnumerable<ZainteresowaniePlcia> GetZainteresowania();
         public bool DeleteZainteresowanie(int id);
 

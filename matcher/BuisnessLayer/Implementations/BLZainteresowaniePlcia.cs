@@ -1,4 +1,5 @@
 ﻿using BuisnessLayer.Interfaces;
+using Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,24 +11,43 @@ namespace BuisnessLayer.Implementations
 {
     class BLZainteresowaniePlcia : IZainteresowaniePlacia
     {
-        public void AddZainteresowaniePlcia(ZainteresowaniePlcia zainteresowanieplacia)
+        private readonly IUnitOfWork uow;
+        public BLZainteresowaniePlcia(IUnitOfWork uow)
         {
-            throw new NotImplementedException();
+            this.uow = uow;
+        }
+        public ZainteresowaniePlcia AddZainteresowaniePlcia(ZainteresowaniePlcia zainteresowanieplacia)
+        {
+            var _zainteresowaieplcia = uow.ZainteresowaniePlcia.GetZainteresowanie(zainteresowanieplacia.ZainteresowaniePlcia_Id);
+            if (_zainteresowaieplcia == null)
+            {
+                _zainteresowaieplcia = new ZainteresowaniePlcia();
+
+                uow.ZainteresowaniePlcia.AddZainteresowaniePlcia(_zainteresowaieplcia);
+            }
+            uow.Complete();
+            return _zainteresowaieplcia;
         }
 
         public bool DeleteZainteresowanie(int id)
         {
-            throw new NotImplementedException();
+            if (id <= default(int))
+            {
+                throw new ArgumentException("Invalid konwersacja id");
+            }
+            var isremoved = uow.ZainteresowaniePlcia.DeleteZainteresowanie(id);
+            if (isremoved) uow.Complete();
+            return isremoved;
         }
 
         public IEnumerable<ZainteresowaniePlcia> GetZainteresowania()
         {
-            throw new NotImplementedException();
+            return uow.ZainteresowaniePlcia.GetZainteresowania();
         }
 
         public ZainteresowaniePlcia GetZainteresowanie(int id)
         {
-            throw new NotImplementedException();
+            return uow.ZainteresowaniePlcia.GetZainteresowanie(id);
         }
     }
 }
